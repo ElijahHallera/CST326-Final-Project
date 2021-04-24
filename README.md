@@ -1,6 +1,6 @@
 # CST326 - Final Project 
 
-# RPG Video Game.
+# RPG Video Game
 
 # Contributors:
 
