@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class Log : Enemy
 {
-    private Rigidbody2D myRigidbody;
+    public Rigidbody2D myRigidbody;
     public Transform target; //player location
     public float chaseRadius;
     public float attackRadius;
@@ -29,14 +29,14 @@ public class Log : Enemy
         CheckDistance();
     }
 
-    void CheckDistance()
+    public virtual void CheckDistance()
     {
         if (Vector3.Distance(target.position, transform.position) <= chaseRadius && Vector3.Distance(target.position, transform.position) > attackRadius)
         {
             if (currentState == EnemyState.idle || currentState == EnemyState.walk && currentState != EnemyState.stagger)
             {
                 Vector3 temp = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
-                //changeAnimation(temp - transform.position);
+                changeAnimation(temp - transform.position);
                 myRigidbody.MovePosition(temp);
                 ChangeState(EnemyState.walk);
                 animator.SetBool("wakeUp", true);
@@ -48,13 +48,13 @@ public class Log : Enemy
         }
     }
 
-    void SetAnimatorFloat(Vector2 setVector)
+    public void SetAnimatorFloat(Vector2 setVector)
     {
-        animator.SetFloat("MoveX", setVector.x);
-        animator.SetFloat("MoveY", setVector.y);
+        animator.SetFloat("moveX", setVector.x);
+        animator.SetFloat("moveY", setVector.y);
     }
 
-    void changeAnimation(Vector2 direction)
+    public void changeAnimation(Vector2 direction)
     {
         if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
         {
@@ -66,7 +66,7 @@ public class Log : Enemy
                 SetAnimatorFloat(Vector2.left);
             }
 
-        }else if (Mathf.Abs(direction.y) > Mathf.Abs(direction.x))
+        }else if (Mathf.Abs(direction.x) < Mathf.Abs(direction.y))
         {
             if (direction.y > 0)
             {
@@ -78,7 +78,7 @@ public class Log : Enemy
         }
     }
 
-    void ChangeState(EnemyState newState)
+    public void ChangeState(EnemyState newState)
     {
         //checks currentState enum inherited from Enemy Script
         if (currentState != newState)

@@ -25,8 +25,8 @@ public class PlayerMovement : MonoBehaviour
         currentState = PlayerState.walk;
         myRigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        animator.SetFloat("MoveX", 0);
-        animator.SetFloat("MoveY", -1);
+        animator.SetFloat("moveX", 0);
+        animator.SetFloat("moveY", -1);
     }
 
     // Update is called once per frame
@@ -62,8 +62,8 @@ public class PlayerMovement : MonoBehaviour
         if (changeSpeed != Vector3.zero)
         {
             Move();
-            animator.SetFloat("MoveX", changeSpeed.x);
-            animator.SetFloat("MoveY", changeSpeed.y);
+            animator.SetFloat("moveX", changeSpeed.x);
+            animator.SetFloat("moveY", changeSpeed.y);
             animator.SetBool("Walking", true);
         }
         else
