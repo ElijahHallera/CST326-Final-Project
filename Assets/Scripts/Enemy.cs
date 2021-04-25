@@ -12,7 +12,9 @@ public enum EnemyState
 
 public class Enemy : MonoBehaviour
 {
+    [Header("State Machine")]
     public EnemyState currentState;
+
     public FloatValue maxHealth;
     public float health;
     public string enemyName;
