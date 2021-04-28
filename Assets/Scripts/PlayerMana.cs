@@ -19,9 +19,12 @@ public class PlayerMana : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.H))
         {
-            Debug.Log("HEALING");
-            health.playerHealing();
-            //Activate Healing spell in Health Manager
+            if (myManaBar.value > 0)
+            {
+                Debug.Log("HEALING");
+                health.playerHealing();
+                //Activate Healing spell in Health Manager
+            }
         }
     }
 
