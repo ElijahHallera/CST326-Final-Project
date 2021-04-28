@@ -169,6 +169,7 @@ MonoBehaviour:
   baseAttack: 2
   moveSpeed: 1
   deathEffect: {fileID: 8276862033563717016, guid: 49e678825e85544b399706abf67afecd, type: 3}
+  isBoss: 0
   myRigidbody: {fileID: 33854757}
   target: {fileID: 756393605}
   chaseRadius: 5
@@ -397,7 +398,7 @@ PrefabInstance:
       objectReference: {fileID: 1306079537}
     - target: {fileID: 8772000127698283877, guid: 2e1cd3e56cfdf4bcd8579edd5bdce355, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8772000127698283877, guid: 2e1cd3e56cfdf4bcd8579edd5bdce355, type: 3}
       propertyPath: m_SortingOrder
@@ -470,7 +471,7 @@ PrefabInstance:
       objectReference: {fileID: 1306079537}
     - target: {fileID: 8772000127698283877, guid: 2e1cd3e56cfdf4bcd8579edd5bdce355, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8772000127698283877, guid: 2e1cd3e56cfdf4bcd8579edd5bdce355, type: 3}
       propertyPath: m_SortingOrder
@@ -707,7 +708,7 @@ PrefabInstance:
       objectReference: {fileID: 1306079537}
     - target: {fileID: 8772000127698283877, guid: 2e1cd3e56cfdf4bcd8579edd5bdce355, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8772000127698283877, guid: 2e1cd3e56cfdf4bcd8579edd5bdce355, type: 3}
       propertyPath: m_SortingOrder
@@ -1152,6 +1153,7 @@ MonoBehaviour:
   baseAttack: 2
   moveSpeed: 1
   deathEffect: {fileID: 8276862033563717016, guid: ca43ee6d8d3304b99b531c2a51b34ce0, type: 3}
+  isBoss: 0
   myRigidbody: {fileID: 472228082}
   target: {fileID: 756393605}
   chaseRadius: 5
@@ -25674,7 +25676,7 @@ PrefabInstance:
       objectReference: {fileID: 1306079537}
     - target: {fileID: 8772000127698283877, guid: 2e1cd3e56cfdf4bcd8579edd5bdce355, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8772000127698283877, guid: 2e1cd3e56cfdf4bcd8579edd5bdce355, type: 3}
       propertyPath: m_SortingOrder
@@ -25986,7 +25988,7 @@ PrefabInstance:
       objectReference: {fileID: 1306079537}
     - target: {fileID: 8772000127698283877, guid: 2e1cd3e56cfdf4bcd8579edd5bdce355, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8772000127698283877, guid: 2e1cd3e56cfdf4bcd8579edd5bdce355, type: 3}
       propertyPath: m_SortingOrder
@@ -26183,7 +26185,7 @@ PrefabInstance:
       objectReference: {fileID: 1306079537}
     - target: {fileID: 8772000127698283877, guid: 2e1cd3e56cfdf4bcd8579edd5bdce355, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8772000127698283877, guid: 2e1cd3e56cfdf4bcd8579edd5bdce355, type: 3}
       propertyPath: m_SortingOrder
@@ -26410,7 +26412,7 @@ PrefabInstance:
       objectReference: {fileID: 1306079537}
     - target: {fileID: 8772000127698283877, guid: 2e1cd3e56cfdf4bcd8579edd5bdce355, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8772000127698283877, guid: 2e1cd3e56cfdf4bcd8579edd5bdce355, type: 3}
       propertyPath: m_SortingOrder
@@ -26488,7 +26490,7 @@ PrefabInstance:
       objectReference: {fileID: 1306079537}
     - target: {fileID: 8772000127698283877, guid: 2e1cd3e56cfdf4bcd8579edd5bdce355, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8772000127698283877, guid: 2e1cd3e56cfdf4bcd8579edd5bdce355, type: 3}
       propertyPath: m_SortingOrder
@@ -28807,6 +28809,7 @@ MonoBehaviour:
   baseAttack: 2
   moveSpeed: 1
   deathEffect: {fileID: 8276862033563717016, guid: ca43ee6d8d3304b99b531c2a51b34ce0, type: 3}
+  isBoss: 0
   myRigidbody: {fileID: 917573038}
   target: {fileID: 756393605}
   chaseRadius: 5
@@ -29035,7 +29038,7 @@ PrefabInstance:
       objectReference: {fileID: 1306079537}
     - target: {fileID: 8772000127698283877, guid: 2e1cd3e56cfdf4bcd8579edd5bdce355, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8772000127698283877, guid: 2e1cd3e56cfdf4bcd8579edd5bdce355, type: 3}
       propertyPath: m_SortingOrder
@@ -29138,6 +29141,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BigLogOrigin
       objectReference: {fileID: 0}
+    - target: {fileID: 8772000127698283865, guid: 82ef2b1ca4f7d47788c382498f29b8d3, type: 3}
+      propertyPath: isBoss
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8772000127698283874, guid: 82ef2b1ca4f7d47788c382498f29b8d3, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -29188,7 +29195,7 @@ PrefabInstance:
       objectReference: {fileID: 1306079537}
     - target: {fileID: 8772000127698283877, guid: 82ef2b1ca4f7d47788c382498f29b8d3, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8772000127698283877, guid: 82ef2b1ca4f7d47788c382498f29b8d3, type: 3}
       propertyPath: m_SortingOrder
@@ -29424,7 +29431,7 @@ PrefabInstance:
       objectReference: {fileID: 1306079537}
     - target: {fileID: 8772000127698283877, guid: 2e1cd3e56cfdf4bcd8579edd5bdce355, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8772000127698283877, guid: 2e1cd3e56cfdf4bcd8579edd5bdce355, type: 3}
       propertyPath: m_SortingOrder
@@ -29903,7 +29910,7 @@ PrefabInstance:
       objectReference: {fileID: 1306079537}
     - target: {fileID: 8772000127698283877, guid: 2e1cd3e56cfdf4bcd8579edd5bdce355, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8772000127698283877, guid: 2e1cd3e56cfdf4bcd8579edd5bdce355, type: 3}
       propertyPath: m_SortingOrder
@@ -30364,7 +30371,7 @@ PrefabInstance:
       objectReference: {fileID: 1306079537}
     - target: {fileID: 8772000127698283877, guid: 2e1cd3e56cfdf4bcd8579edd5bdce355, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8772000127698283877, guid: 2e1cd3e56cfdf4bcd8579edd5bdce355, type: 3}
       propertyPath: m_SortingOrder
@@ -30725,7 +30732,7 @@ PrefabInstance:
       objectReference: {fileID: 1306079537}
     - target: {fileID: 8772000127698283877, guid: 2e1cd3e56cfdf4bcd8579edd5bdce355, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8772000127698283877, guid: 2e1cd3e56cfdf4bcd8579edd5bdce355, type: 3}
       propertyPath: m_SortingOrder
@@ -30857,6 +30864,7 @@ MonoBehaviour:
   baseAttack: 2
   moveSpeed: 1
   deathEffect: {fileID: 8276862033563717016, guid: ca43ee6d8d3304b99b531c2a51b34ce0, type: 3}
+  isBoss: 0
   myRigidbody: {fileID: 1507749253}
   target: {fileID: 756393605}
   chaseRadius: 5
@@ -31085,7 +31093,7 @@ PrefabInstance:
       objectReference: {fileID: 1306079537}
     - target: {fileID: 8772000127698283877, guid: 2e1cd3e56cfdf4bcd8579edd5bdce355, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8772000127698283877, guid: 2e1cd3e56cfdf4bcd8579edd5bdce355, type: 3}
       propertyPath: m_SortingOrder
@@ -31258,7 +31266,7 @@ PrefabInstance:
       objectReference: {fileID: 1306079537}
     - target: {fileID: 8772000127698283877, guid: 2e1cd3e56cfdf4bcd8579edd5bdce355, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8772000127698283877, guid: 2e1cd3e56cfdf4bcd8579edd5bdce355, type: 3}
       propertyPath: m_SortingOrder
@@ -47057,7 +47065,7 @@ PrefabInstance:
       objectReference: {fileID: 1306079537}
     - target: {fileID: 8772000127698283877, guid: 2e1cd3e56cfdf4bcd8579edd5bdce355, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8772000127698283877, guid: 2e1cd3e56cfdf4bcd8579edd5bdce355, type: 3}
       propertyPath: m_SortingOrder
@@ -48015,6 +48023,7 @@ MonoBehaviour:
   baseAttack: 2
   moveSpeed: 1
   deathEffect: {fileID: 8276862033563717016, guid: ca43ee6d8d3304b99b531c2a51b34ce0, type: 3}
+  isBoss: 0
   myRigidbody: {fileID: 2034272404}
   target: {fileID: 756393605}
   chaseRadius: 5
@@ -48381,9 +48390,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 348756840}
     - target: {fileID: 5886443910801234550, guid: f321ed9645b8d43dc877655ee0071572, type: 3}
+      propertyPath: deathEffect
+      value: 
+      objectReference: {fileID: 8276862033563717016, guid: ca43ee6d8d3304b99b531c2a51b34ce0, type: 3}
+    - target: {fileID: 5886443910801234550, guid: f321ed9645b8d43dc877655ee0071572, type: 3}
       propertyPath: myHealthBar
       value: 
       objectReference: {fileID: 1613543010}
+    - target: {fileID: 5886443910801234550, guid: f321ed9645b8d43dc877655ee0071572, type: 3}
+      propertyPath: healingEffect
+      value: 
+      objectReference: {fileID: 99835661182942174, guid: d811ca30ffe324b658f9ad954084bb99, type: 3}
     - target: {fileID: 5886443910801234551, guid: f321ed9645b8d43dc877655ee0071572, type: 3}
       propertyPath: m_Name
       value: HealthSystem

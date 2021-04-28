@@ -7,6 +7,8 @@ public class PlayerHealth : MonoBehaviour
 {
     public Slider myHealthBar;
     public PlayerMana mana;
+    public GameObject deathEffect;
+    public GameObject healingEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +22,7 @@ public class PlayerHealth : MonoBehaviour
         if(myHealthBar.value <= 0)
         {
             Camera.main.transform.parent = null;
+            DeathEffect();
             GameObject.FindWithTag("Player").SetActive(false);
         }
     }
@@ -33,11 +36,21 @@ public class PlayerHealth : MonoBehaviour
     {
         if(myHealthBar.value < 100)
         {
+            Instantiate(healingEffect, transform.position, Quaternion.identity);
             mana.manaHeal();
             myHealthBar.value = 100;
         } else
         {
             Debug.Log("Health is already full!");
+        }
+    }
+
+    public void DeathEffect()
+    {
+        if (deathEffect != null)
+        {
+            GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
+            Destroy(effect, 1f);
         }
     }
 }

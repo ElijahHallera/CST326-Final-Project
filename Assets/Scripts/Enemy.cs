@@ -21,6 +21,7 @@ public class Enemy : MonoBehaviour
     public int baseAttack;
     public float moveSpeed;
     public GameObject deathEffect;
+    public bool isBoss;
 
     void DeathEffect()
     {
