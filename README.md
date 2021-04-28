@@ -10,7 +10,7 @@
 - Github Link: https://github.com/Cristian277
 
 ### Elijah Hallera
-- Email: 
-- Phone: 
+- Email: ehallera@csumb.edu
+- Phone: 206-794-6000
 - Github Link: https://github.com/ElijahHallera
 
