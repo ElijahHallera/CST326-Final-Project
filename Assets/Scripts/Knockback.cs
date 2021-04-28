@@ -41,7 +41,6 @@ public class Knockback : MonoBehaviour
                     //collision.GetComponent<PlayerHealth>().playerHit();
                     health.playerHit();
                 }
-
             }
         }
     }
