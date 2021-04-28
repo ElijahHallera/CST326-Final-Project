@@ -26,7 +26,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void playerHit()
     {
-        myHealthBar.value -= 20;
+        myHealthBar.value -= 10;
     }
 
     public void playerHealing()
