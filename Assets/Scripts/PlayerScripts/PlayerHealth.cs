@@ -31,7 +31,10 @@ public class PlayerHealth : MonoBehaviour
 
     public void playerHit()
     {
-        myHealthBar.value -= 10;
+        if (!gameObject.CompareTag("Fireball"))
+        {
+            myHealthBar.value -= 10;
+        }
     }
 
     public void playerHealing()
