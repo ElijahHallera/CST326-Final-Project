@@ -60,8 +60,27 @@ public class PlayerMovement : MonoBehaviour
 
     public void MakeFireball()
     {
+
+        Vector3 direction = ChooseFireballDirection();
+        Vector3 fireballOffset = transform.position;
+
+        if(animator.GetFloat("moveX") == -1.0) //left
+        {
+            fireballOffset = fireballOffset + new Vector3(-1, 0, 0);
+
+        }else if(animator.GetFloat("moveX") == 1.0)
+        {
+            fireballOffset = fireballOffset + new Vector3(1, 0, 0);
+        }else if(animator.GetFloat("moveY") == 1.0)
+        {
+            fireballOffset = fireballOffset + new Vector3(0, 1, 0);
+        }else if(animator.GetFloat("moveY") == -1.0)
+        {
+            fireballOffset = fireballOffset + new Vector3(0, -1, 0);
+        }
+
         Vector2 temporary = new Vector2(animator.GetFloat("moveX"), animator.GetFloat("moveY"));
-        Fireball fb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Fireball>();
+        Fireball fb = Instantiate(projectile,fireballOffset, Quaternion.identity).GetComponent<Fireball>();
         fb.Setup(temporary, ChooseFireballDirection());
     }
 

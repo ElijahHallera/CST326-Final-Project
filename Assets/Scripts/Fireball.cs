@@ -8,13 +8,6 @@ public class Fireball : MonoBehaviour
     public float speed;
     public Rigidbody2D myRigidbody;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     public void Setup(Vector2 velocity, Vector3 direction)
     {
