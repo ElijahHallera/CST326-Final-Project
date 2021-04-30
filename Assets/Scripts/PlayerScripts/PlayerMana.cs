@@ -7,6 +7,7 @@ public class PlayerMana : MonoBehaviour
 {
     public Slider myManaBar;
     public PlayerHealth health;
+    public PlayerMovement fireballMechanics;
 
     // Start is called before the first frame update
     void Start()
@@ -14,7 +15,6 @@ public class PlayerMana : MonoBehaviour
         myManaBar.value = 100;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.H))
@@ -23,7 +23,22 @@ public class PlayerMana : MonoBehaviour
             {
                 Debug.Log("HEALING");
                 health.playerHealing();
-                //Activate Healing spell in Health Manager
+            } else
+            {
+                Debug.Log("Out of Mana");
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            if (myManaBar.value >= 50)
+            {
+                Debug.Log("FIREBALL");
+                fireballMechanics.MakeFireball();
+                manaFire();
+            } else
+            {
+                Debug.Log("Out of Mana");
             }
         }
     }
@@ -31,5 +46,10 @@ public class PlayerMana : MonoBehaviour
     public void manaHeal()
     {
         myManaBar.value -= 25;
+    }
+
+    public void manaFire()
+    {
+        myManaBar.value -= 50;
     }
 }

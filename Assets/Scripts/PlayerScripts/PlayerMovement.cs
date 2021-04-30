@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D myRigidbody;
     private Vector3 changeSpeed;
     private Animator animator;
+    public GameObject projectile;
+    public PlayerMana mana;
 
     // Start is called before the first frame update
     void Start()
@@ -40,8 +42,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && currentState != PlayerState.attack && currentState!= PlayerState.stagger)
         {
             StartCoroutine(AttackCo());
-        }
-        else if (currentState == PlayerState.walk || currentState == PlayerState.idle)
+        } else if (currentState == PlayerState.walk || currentState == PlayerState.idle)
         {
             UpdateAnimationAndMove();
         }
@@ -55,6 +56,38 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("attacking", false);
         yield return new WaitForSeconds(.3f);
         currentState = PlayerState.walk;
+    }
+
+    public void MakeFireball()
+    {
+
+        Vector3 direction = ChooseFireballDirection();
+        Vector3 fireballOffset = transform.position;
+
+        if(animator.GetFloat("moveX") == -1.0) //left
+        {
+            fireballOffset = fireballOffset + new Vector3(-1, 0, 0);
+
+        }else if(animator.GetFloat("moveX") == 1.0)
+        {
+            fireballOffset = fireballOffset + new Vector3(1, 0, 0);
+        }else if(animator.GetFloat("moveY") == 1.0)
+        {
+            fireballOffset = fireballOffset + new Vector3(0, 1, 0);
+        }else if(animator.GetFloat("moveY") == -1.0)
+        {
+            fireballOffset = fireballOffset + new Vector3(0, -1, 0);
+        }
+
+        Vector2 temporary = new Vector2(animator.GetFloat("moveX"), animator.GetFloat("moveY"));
+        Fireball fb = Instantiate(projectile,fireballOffset, Quaternion.identity).GetComponent<Fireball>();
+        fb.Setup(temporary, ChooseFireballDirection());
+    }
+
+    Vector3 ChooseFireballDirection()
+    {
+        float temporary = Mathf.Atan2(animator.GetFloat("moveY"), animator.GetFloat("moveX")) * Mathf.Rad2Deg;
+        return new Vector3(0, 0, temporary);
     }
 
     void UpdateAnimationAndMove()
