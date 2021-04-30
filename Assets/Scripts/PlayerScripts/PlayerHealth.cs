@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
@@ -23,6 +24,7 @@ public class PlayerHealth : MonoBehaviour
         {
             Camera.main.transform.parent = null;
             DeathEffect();
+            SceneManager.LoadScene("Start Menu");
             GameObject.FindWithTag("Player").SetActive(false);
         }
     }
