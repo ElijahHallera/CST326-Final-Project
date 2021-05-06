@@ -52,4 +52,9 @@ public class PlayerMana : MonoBehaviour
     {
         myManaBar.value -= 50;
     }
+
+    public void fillMana()
+    {
+        myManaBar.value = 100;
+    }
 }

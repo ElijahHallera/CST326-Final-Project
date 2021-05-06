@@ -55,7 +55,7 @@ public class PlayerStamina : MonoBehaviour
 
         while(myStaminaBar.value < 1000)
         {
-            myStaminaBar.value += 5;
+            myStaminaBar.value += 10;
             yield return regenerationTick;
         }
         regeneration = null;
@@ -83,5 +83,10 @@ public class PlayerStamina : MonoBehaviour
             Debug.Log("Not Enough Stamina");
             running = false;
         }
+    }
+
+    public void fillStamina()
+    {
+        myStaminaBar.value = 1000;
     }
 }

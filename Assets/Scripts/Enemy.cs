@@ -22,6 +22,7 @@ public class Enemy : MonoBehaviour
     public float moveSpeed;
     public GameObject deathEffect;
     public bool isBoss;
+    public PlayerLeveling playerExperience;
 
     void DeathEffect()
     {
@@ -45,6 +46,7 @@ public class Enemy : MonoBehaviour
         {
             DeathEffect();
             Destroy(this.gameObject);
+            playerExperience.gainExperience();
         }
     }
 
