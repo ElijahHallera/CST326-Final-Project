@@ -51,7 +51,7 @@ public class PlayerLeveling : MonoBehaviour
         if(currentEXP >= requiredEXP)
         {
             currentEXP -= requiredEXP;
-            requiredEXP += 50;
+            requiredEXP += 20;
             Debug.Log("New EXP Milestone " + requiredEXP);
             levelUP();
         }
