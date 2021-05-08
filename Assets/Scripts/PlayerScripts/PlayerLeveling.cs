@@ -22,11 +22,13 @@ public class PlayerLeveling : MonoBehaviour
     void Start()
     {
         playerLevel.text = currentLevel.ToString();
+        playerLevel.color = Color.white;
     }
 
     public void refreshLevel()
     {
         playerLevel.GetComponent<Text>().text = currentLevel.ToString();
+        playerLevel.color = Color.white;
     }
 
     public void levelUP()
