@@ -45,8 +45,8 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             DeathEffect();
-            Destroy(this.gameObject);
             playerExperience.gainExperience();
+            Destroy(this.gameObject);
         }
     }
 

@@ -1255,7 +1255,7 @@ MonoBehaviour:
   moveSpeed: 1
   deathEffect: {fileID: 8276862033563717016, guid: ca43ee6d8d3304b99b531c2a51b34ce0, type: 3}
   isBoss: 0
-  playerExperience: {fileID: 0}
+  playerExperience: {fileID: 756393611}
   myRigidbody: {fileID: 472228082}
   target: {fileID: 756393605}
   chaseRadius: 5
@@ -26872,6 +26872,11 @@ MonoBehaviour:
   health: {fileID: 1306079537}
   mana: {fileID: 348756840}
   stamina: {fileID: 706032482}
+--- !u!50 &768683017 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 8772000127698283879, guid: 82ef2b1ca4f7d47788c382498f29b8d3, type: 3}
+  m_PrefabInstance: {fileID: 946176582}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &788667750
 GameObject:
   m_ObjectHideFlags: 0
@@ -29035,7 +29040,7 @@ MonoBehaviour:
   moveSpeed: 1
   deathEffect: {fileID: 8276862033563717016, guid: ca43ee6d8d3304b99b531c2a51b34ce0, type: 3}
   isBoss: 0
-  playerExperience: {fileID: 0}
+  playerExperience: {fileID: 756393611}
   myRigidbody: {fileID: 917573038}
   target: {fileID: 756393605}
   chaseRadius: 5
@@ -29375,6 +29380,14 @@ PrefabInstance:
       propertyPath: isBoss
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8772000127698283865, guid: 82ef2b1ca4f7d47788c382498f29b8d3, type: 3}
+      propertyPath: myRigidbody
+      value: 
+      objectReference: {fileID: 768683017}
+    - target: {fileID: 8772000127698283865, guid: 82ef2b1ca4f7d47788c382498f29b8d3, type: 3}
+      propertyPath: playerExperience
+      value: 
+      objectReference: {fileID: 756393611}
     - target: {fileID: 8772000127698283874, guid: 82ef2b1ca4f7d47788c382498f29b8d3, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -48521,7 +48534,7 @@ MonoBehaviour:
   moveSpeed: 1
   deathEffect: {fileID: 8276862033563717016, guid: ca43ee6d8d3304b99b531c2a51b34ce0, type: 3}
   isBoss: 0
-  playerExperience: {fileID: 0}
+  playerExperience: {fileID: 756393611}
   myRigidbody: {fileID: 2034272404}
   target: {fileID: 756393605}
   chaseRadius: 5
