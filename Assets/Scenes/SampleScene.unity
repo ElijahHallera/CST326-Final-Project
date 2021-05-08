@@ -30817,7 +30817,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -31168,7 +31168,7 @@ MonoBehaviour:
   moveSpeed: 1
   deathEffect: {fileID: 8276862033563717016, guid: ca43ee6d8d3304b99b531c2a51b34ce0, type: 3}
   isBoss: 0
-  playerExperience: {fileID: 0}
+  playerExperience: {fileID: 756393611}
   myRigidbody: {fileID: 1507749253}
   target: {fileID: 756393605}
   chaseRadius: 5
