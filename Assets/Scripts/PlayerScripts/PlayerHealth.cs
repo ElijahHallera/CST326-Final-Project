@@ -24,7 +24,7 @@ public class PlayerHealth : MonoBehaviour
         {
             Camera.main.transform.parent = null;
             DeathEffect();
-            SceneManager.LoadScene("Start Menu");
+            SceneManager.LoadScene("Death");
             GameObject.FindWithTag("Player").SetActive(false);
         }
     }
