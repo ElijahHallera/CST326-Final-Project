@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class TransitionScene : MonoBehaviour
 {
-    private float delayBeforeLoading = 5f;
+    private float delayBeforeLoading = 3f;
 
     private float timeElapsed;
 
