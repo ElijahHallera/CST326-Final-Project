@@ -11,13 +11,6 @@ public class Knockback : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        /*
-        if (collision.gameObject.CompareTag("Breakable")&&collision.gameObject.CompareTag("Player"))
-        {
-            collision.GetComponent<pot>().Smash();
-        }
-        */
-
         if (collision.gameObject.CompareTag("Enemy")||collision.gameObject.CompareTag("Player"))
         {
             Rigidbody2D hit = collision.GetComponent<Rigidbody2D>();
@@ -38,7 +31,6 @@ public class Knockback : MonoBehaviour
                 {
                     hit.GetComponent<PlayerMovement>().currentState = PlayerState.stagger;
                     collision.GetComponent<PlayerMovement>().Knock(knockBackTime);
-                    //collision.GetComponent<PlayerHealth>().playerHit();
                     health.playerHit();
                 }
             }

@@ -35,6 +35,7 @@ public class PlayerLeveling : MonoBehaviour
     {
         currentLevel++;
         Debug.Log("LEVEL UP, YOU'RE NOW LVL: " + currentLevel);
+        health.increasePlayerHealth();
         health.playerHealing();
         mana.fillMana();
         stamina.fillStamina();
