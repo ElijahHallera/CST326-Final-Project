@@ -10,11 +10,13 @@ public class PlayerHealth : MonoBehaviour
     public PlayerMana mana;
     public GameObject deathEffect;
     public GameObject healingEffect;
+    public float currentMaxHealth;
 
     // Start is called before the first frame update
     void Start()
     {
         myHealthBar.value = 100;
+        currentMaxHealth = 100;
     }
 
     // Update is called once per frame
@@ -37,16 +39,26 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    public void increasePlayerHealth()
+    {
+        currentMaxHealth += 10;
+    }
+
     public void playerHealing()
     {
-        if(myHealthBar.value < 100)
+        if(myHealthBar.value < currentMaxHealth)
         {
             Instantiate(healingEffect, transform.position, Quaternion.identity);
             mana.manaHeal();
-            myHealthBar.value = 100;
+            Debug.Log("Current Max Health Value " + currentMaxHealth);
+            myHealthBar.maxValue = currentMaxHealth;
+            myHealthBar.value = currentMaxHealth;
+            Debug.Log("Current Health Bar Value is " + myHealthBar.value);
         } else
         {
             Debug.Log("Health is already full!");
+            myHealthBar.maxValue = currentMaxHealth;
+            myHealthBar.value = currentMaxHealth;
         }
     }
 
