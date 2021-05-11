@@ -25,6 +25,14 @@ public class PlayerLeveling : MonoBehaviour
         playerLevel.color = Color.white;
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            levelUP();
+        }
+    }
+
     public void refreshLevel()
     {
         playerLevel.GetComponent<Text>().text = currentLevel.ToString();
