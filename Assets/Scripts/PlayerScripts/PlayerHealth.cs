@@ -22,7 +22,7 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(myHealthBar.value <= 0)
+        if (myHealthBar.value <= 0)
         {
             Camera.main.transform.parent = null;
             DeathEffect();
@@ -46,15 +46,17 @@ public class PlayerHealth : MonoBehaviour
 
     public void playerHealing()
     {
-        if(myHealthBar.value < currentMaxHealth)
+        if (myHealthBar.value < currentMaxHealth)
         {
-            Instantiate(healingEffect, transform.position, Quaternion.identity);
+            GameObject newHealing = (GameObject)Instantiate(healingEffect, transform.position, Quaternion.identity);
             mana.manaHeal();
             Debug.Log("Current Max Health Value " + currentMaxHealth);
             myHealthBar.maxValue = currentMaxHealth;
             myHealthBar.value = currentMaxHealth;
             Debug.Log("Current Health Bar Value is " + myHealthBar.value);
-        } else
+            Destroy(newHealing, 2);
+        }
+        else
         {
             Debug.Log("Health is already full!");
             myHealthBar.maxValue = currentMaxHealth;
