@@ -70,6 +70,12 @@ public class PlayerStamina : MonoBehaviour
 
             myStaminaBar.value -= 2;
 
+            if (Input.GetKeyUp(KeyCode.LeftShift))
+            {
+                running = false;
+                movement.playerWalking();
+            }
+
             if (regeneration != null)
             {
                 StopCoroutine(regeneration);
