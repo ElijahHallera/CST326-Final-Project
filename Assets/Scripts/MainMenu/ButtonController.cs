@@ -33,7 +33,7 @@ public class ButtonController : MonoBehaviour, IPointerEnterHandler, IPointerExi
         {
             case ButtonType.NEW:
                 Debug.Log("NEW GAME BUTTON PRESSED");
-                SceneManager.LoadScene("SampleScene");
+                SceneManager.LoadScene("HelpControls");
                 break;
             case ButtonType.CREDITS:
                 Debug.Log("CREDITS BUTTON PRESSED");
