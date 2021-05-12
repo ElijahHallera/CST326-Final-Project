@@ -9,11 +9,15 @@ public class TreasureChest : MonoBehaviour
     public bool isOpen;
     public bool playerInRange;
     private Animator anim;
+    public PlayerHealth health;
+    private float delayBeforeLoading = 3f;
+    private float timeElapsed;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
+        health = GameObject.FindWithTag("Player").GetComponentInChildren<PlayerHealth>();
     }
 
     // Update is called once per frame
@@ -29,6 +33,15 @@ public class TreasureChest : MonoBehaviour
             {
                 ChestAlreadyOpen();
                 Debug.Log("Already Opened");
+            }
+        }
+        if (isOpen)
+        {
+            timeElapsed += Time.deltaTime;
+
+            if (timeElapsed > delayBeforeLoading)
+            {
+                health.myHealthBar.value = 0;
             }
         }
     }

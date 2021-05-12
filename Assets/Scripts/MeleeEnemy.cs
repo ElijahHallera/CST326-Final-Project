@@ -4,17 +4,6 @@ using UnityEngine;
 
 public class MeleeEnemy : Log
 {
-    
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
     public override void CheckDistance()
     {
         if (Vector3.Distance(target.position, transform.position) <= chaseRadius && Vector3.Distance(target.position, transform.position) > attackRadius)
