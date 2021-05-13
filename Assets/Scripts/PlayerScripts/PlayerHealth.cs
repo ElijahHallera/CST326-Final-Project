@@ -11,10 +11,13 @@ public class PlayerHealth : MonoBehaviour
     public GameObject deathEffect;
     public GameObject healingEffect;
     public float currentMaxHealth;
+    public AudioSource audioSource;
+    public AudioClip healingSound;
 
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         myHealthBar.value = 100;
         currentMaxHealth = 100;
     }
@@ -48,6 +51,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (myHealthBar.value < currentMaxHealth)
         {
+            audioSource.PlayOneShot(healingSound);
             GameObject newHealing = (GameObject)Instantiate(healingEffect, transform.position, Quaternion.identity);
             mana.manaHeal();
             Debug.Log("Current Max Health Value " + currentMaxHealth);

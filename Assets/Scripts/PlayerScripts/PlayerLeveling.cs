@@ -17,6 +17,8 @@ public class PlayerLeveling : MonoBehaviour
     public PlayerHealth health;
     public PlayerMana mana;
     public PlayerStamina stamina;
+    public AudioSource audioSource;
+    public AudioClip LevelUpSound;
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +43,7 @@ public class PlayerLeveling : MonoBehaviour
 
     public void levelUP()
     {
+        audioSource.PlayOneShot(LevelUpSound);
         currentLevel++;
         Debug.Log("LEVEL UP, YOU'RE NOW LVL: " + currentLevel);
         health.increasePlayerHealth();
