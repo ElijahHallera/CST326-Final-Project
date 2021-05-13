@@ -2,12 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Serialization;
 
 public class PlayerMana : MonoBehaviour
 {
     public Slider myManaBar;
     public PlayerHealth health;
     public PlayerMovement fireballMechanics;
+
+    //Audio
+    public AudioSource audioSource;
+    public AudioClip fireballShootSound;
+
+    void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +44,7 @@ public class PlayerMana : MonoBehaviour
             if (myManaBar.value >= 50)
             {
                 Debug.Log("FIREBALL");
+                audioSource.PlayOneShot(fireballShootSound);
                 fireballMechanics.MakeFireball();
                 manaFire();
             } else
