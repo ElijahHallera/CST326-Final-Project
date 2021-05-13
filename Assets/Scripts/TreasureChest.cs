@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class TreasureChest : MonoBehaviour
 {
-
     public bool isOpen;
     public bool playerInRange;
     private Animator anim;

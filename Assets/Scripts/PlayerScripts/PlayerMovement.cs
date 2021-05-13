@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     public GameObject projectile;
     public PlayerMana mana;
+    public AudioSource audioSource;
+    public AudioClip swordSound;
 
     // Start is called before the first frame update
     void Start()
@@ -52,6 +54,8 @@ public class PlayerMovement : MonoBehaviour
     {
         animator.SetBool("attacking", true);
         currentState = PlayerState.attack;
+        //put sound here
+        audioSource.PlayOneShot(swordSound);
         yield return null;
         animator.SetBool("attacking", false);
         yield return new WaitForSeconds(.3f);
