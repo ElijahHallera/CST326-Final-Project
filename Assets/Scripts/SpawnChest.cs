@@ -11,6 +11,7 @@ public class SpawnChest : MonoBehaviour
         if (FindObjectOfType<MeleeEnemy>() == null)
         {
             Instantiate(treasureChest, transform.position, Quaternion.identity);
+            this.gameObject.SetActive(false);
         }
     }
 }
