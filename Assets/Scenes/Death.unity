@@ -148,7 +148,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 60131745}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &60131747
 Camera:
   m_ObjectHideFlags: 0
@@ -295,6 +295,7 @@ GameObject:
   m_Component:
   - component: {fileID: 111272337}
   - component: {fileID: 111272338}
+  - component: {fileID: 111272339}
   m_Layer: 0
   m_Name: Death Sound
   m_TagString: Untagged
@@ -412,6 +413,14 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!81 &111272339
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111272336}
+  m_Enabled: 1
 --- !u!1 &241817763
 GameObject:
   m_ObjectHideFlags: 0
