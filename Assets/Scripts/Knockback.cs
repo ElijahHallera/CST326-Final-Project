@@ -31,17 +31,17 @@ public class Knockback : MonoBehaviour
 
                 if (collision.gameObject.CompareTag("Enemy") && collision.isTrigger)
                 {
-                    audioSource.PlayOneShot(enemyHurtSound);
                     hit.GetComponent<Enemy>().currentState = EnemyState.stagger;
                     collision.GetComponent<Enemy>().Knock(hit, knockBackTime, damage);
+                    audioSource.PlayOneShot(enemyHurtSound);
                 }
 
                 if (collision.gameObject.CompareTag("Player"))
                 {
-                    audioSource.PlayOneShot(playerHurtSound);
                     hit.GetComponent<PlayerMovement>().currentState = PlayerState.stagger;
                     collision.GetComponent<PlayerMovement>().Knock(knockBackTime);
                     health.playerHit();
+                    audioSource.PlayOneShot(playerHurtSound);
                 }
             }
         }

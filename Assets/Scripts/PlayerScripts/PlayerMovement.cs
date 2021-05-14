@@ -54,12 +54,12 @@ public class PlayerMovement : MonoBehaviour
     {
         animator.SetBool("attacking", true);
         currentState = PlayerState.attack;
-        //put sound here
-        audioSource.PlayOneShot(swordSound);
         yield return null;
         animator.SetBool("attacking", false);
         yield return new WaitForSeconds(.3f);
         currentState = PlayerState.walk;
+
+        audioSource.PlayOneShot(swordSound);
     }
 
     public void MakeFireball()

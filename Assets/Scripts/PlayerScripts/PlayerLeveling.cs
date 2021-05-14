@@ -43,7 +43,6 @@ public class PlayerLeveling : MonoBehaviour
 
     public void levelUP()
     {
-        audioSource.PlayOneShot(LevelUpSound);
         currentLevel++;
         Debug.Log("LEVEL UP, YOU'RE NOW LVL: " + currentLevel);
         health.increasePlayerHealth();
@@ -51,6 +50,7 @@ public class PlayerLeveling : MonoBehaviour
         mana.fillMana();
         stamina.fillStamina();
         refreshLevel();
+        audioSource.PlayOneShot(LevelUpSound);
     }
 
     public void gainExperience()
