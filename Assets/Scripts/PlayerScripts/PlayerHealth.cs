@@ -51,7 +51,6 @@ public class PlayerHealth : MonoBehaviour
     {
         if (myHealthBar.value < currentMaxHealth)
         {
-            audioSource.PlayOneShot(healingSound);
             GameObject newHealing = (GameObject)Instantiate(healingEffect, transform.position, Quaternion.identity);
             mana.manaHeal();
             Debug.Log("Current Max Health Value " + currentMaxHealth);
@@ -59,6 +58,7 @@ public class PlayerHealth : MonoBehaviour
             myHealthBar.value = currentMaxHealth;
             Debug.Log("Current Health Bar Value is " + myHealthBar.value);
             Destroy(newHealing, 2);
+            audioSource.PlayOneShot(healingSound);
         }
         else
         {
